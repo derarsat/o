@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Morn;
+    src: url(Morn.otf);
+  }
+  
+* {
+    @apply outline-none
+}
+.container{
+    @apply px-6
+}
+
+.input-group {
+    @apply mb-6
+}
+
+label {
+    @apply block font-semibold mb-3
+}
+
+input,textarea {
+    @apply h-11 w-full border-2 border-primary rounded-md px-4 focus:ring-2 focus:ring-primary
+}
+textarea{
+    @apply h-24
+}
+input[type=checkbox] {
+    @apply w-4 h-4
+}
+button,a{
+    @apply transition hover:scale-[1.03]
+}
+.error-label{
+    @apply text-red-500 font-medium mt-2 block text-sm
+}
+.sidebar-link{
+    @apply flex items-center p-3 mx-3 gap-3 hover:bg-primary rounded-md
+}
+.page-title{
+    @apply text-3xl my-6 flex items-center justify-between
+}
+.page-title a{
+    @apply bg-primary text-base px-4 py-2 rounded-md text-white
+}
+table{
+    @apply w-full
+}
+th{
+    @apply py-4
+}
+td{
+    @apply px-4 text-center
+}
+table,tr{
+    @apply border border-gray-200
+}
+tbody td{
+    @apply py-2
+}
