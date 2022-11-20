@@ -61,3 +61,6 @@ table,tr{
 tbody td{
     @apply py-2
 }
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
