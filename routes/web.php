@@ -40,7 +40,7 @@ Route::get('/events', function () {
     $events = Event::all();
     return view('events', ["events" => $events,"hours" => $hours]);
 });
-Route::group(['prefix' => 'dashboard', 'middleware' => ['web']], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     Route::get('/', function () {
         return view("dashboard.dashboard");
     });
