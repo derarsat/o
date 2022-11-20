@@ -227,7 +227,7 @@
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
                     @foreach($menus as $menu)
-                    <a href="{{ @App::make('url')->to('/').'/storage'.$menu->pdf}}" class="hover:text-primary hover:font-medium">
+                    <a target="_blank" href="{{ @App::make('url')->to('/').'/storage'.$menu->pdf}}" class="hover:text-primary hover:font-medium">
                         <img class="border border-white" src="{{ @App::make('url')->to('/').'/storage'.$menu->image }}" alt="">
                         <h2 class="text-center text-xl mt-3">{{$menu->name}}</h2>
                     </a>
