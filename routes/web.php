@@ -45,5 +45,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
         $vouchers = Gift::all();
         return view("dashboard.vouchers", ['vouchers' => $vouchers]);
     })->name("adminVouchers");
+    Route::delete("vouchers", function (Request $request) {
+        $voucher = Gift::find($request->id);
+        $voucher->delete();
+        return redirect()->back();
+    })->name("deleteVoucher");
 });
 Auth::routes();

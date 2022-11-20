@@ -45,7 +45,7 @@
 <body class=" text-white font-Morn">
     <!-- Gift DIalog -->
     <div id="gift" class="w-screen h-screen fixed  items-center top-0 left-0 z-[200] justify-center bg-black bg-opacity-50 " style="display: none;">
-        <div class="bg-white px-6 py-12 rounded-md text-black relative">
+        <div class="bg-white px-6 py-12 rounded-md text-black relative w-[40rem] max-w-full">
             <button id="giftCloser" class="absolute top-4 right-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -66,19 +66,18 @@
                 </div>
                 <div class="input-group">
                     <label for="message"> Your message</label>
-                    <textarea id="message" placeholder="Enter your message" required name="message">
-                                        </textarea>
+                    <textarea id="message" placeholder="Enter your message" required name="message"></textarea>
                 </div>
                 <input type="submit" value="Submit" class="bg-primary font-semibold text-white mb-4 cursor-pointer">
             </form>
-            <a href="mailto:reservation@onzerestaurant.com">reservation@onzerestaurant.com</a>
+            <a href="mailto:reservations@onzerestaurant.com">reservations@onzerestaurant.com</a>
             <br>
-            <a href="tel:+97144397172">+971 4 439 7172</a>
+            <a href="tel:+97142506567">+971 4 250 6567</a>
         </div>
     </div>
     <!-- End Dialog -->
     <div class="bg-black" style="background-image: url({{ asset('img/bg.png') }})">
-        <div class="container">
+        <div class="container overflow-x-hidden">
             <div class="lg:flex items-center py-6 justify-between hidden" id="top">
                 <div class="flex gap-6 items-center">
                     <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
@@ -131,7 +130,7 @@
                         <a href="/#story">The Story Begins</a>
                         <a href="#menus">Menus</a>
                         <a href="/events">ONZE Djs</a>
-                        <span id="giftToggler" class="cursor-pointer">Gift Vouchers</span>
+                        <span id="giftToggler2" class="cursor-pointer">Gift Vouchers</span>
                         <a href="#" class="font-semibold text-primary">/ MAKE A RESERVATION</a>
 
                     </div>
@@ -142,7 +141,7 @@
                 <h2 class="text-5xl lg:text-6xl  mt-6 lg:mt-0">UNEXPLORED <br> DESIRES</h2>
                 <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer">/ BOOK NOW</p>
                 <span class="w-32 lg:block mt-24 hidden -ml-[3.5rem]" id="hint"></span>
-                <div id="mainLotti" class="absolute -top-20  -right-4  -mt-16">
+                <div id="mainLotti" class="absolute -top-20  -right-12  -mt-16">
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-24  items-center" id="story">
@@ -228,7 +227,7 @@
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
                     @foreach($menus as $menu)
-                    <a href="{{ @App::make('url')->to('/').'/storage'.$menu->pdf}}">
+                    <a href="{{ @App::make('url')->to('/').'/storage'.$menu->pdf}}" class="hover:text-primary hover:font-medium">
                         <img class="border border-white" src="{{ @App::make('url')->to('/').'/storage'.$menu->image }}" alt="">
                         <h2 class="text-center text-xl mt-3">{{$menu->name}}</h2>
                     </a>
@@ -251,8 +250,8 @@
                 <div class="flex justify-start lg:justify-center order-2">
                     <div class="flex gap-0 lg:gap-3 flex-col">
                         <h2 class="text-lg">Contact </h2>
-                        <a target="blank" href="mailto:reservation@onzerestaurant.com">reservation@onzerestaurant.com</a>
-                        <a target="blank" href="tel:+97144397172">+971 4 439 7172</a>
+                        <a target="blank" href="mailto:reservations@onzerestaurant.com">reservations@onzerestaurant.com</a>
+                        <a target="blank" href="tel:+97142506567">+971 4 250 6567</a>
                     </div>
                 </div>
                 <div class="flex justify-start lg:justify-end order-1 lg:order-3">
@@ -371,10 +370,12 @@
     <script>
         let closer = document.getElementById("giftCloser")
         let toggler = document.getElementById("giftToggler")
+        let toggler2 = document.getElementById("giftToggler2")
         let wrap = document.getElementById("gift")
         toggler.onclick = function() {
             wrap.style.display = "flex"
         }
+ 
         closer.onclick = function() {
             wrap.style.display = "none"
         }
