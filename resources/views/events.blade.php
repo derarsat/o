@@ -53,7 +53,7 @@
 <body class=" text-white font-Morn">
     <!-- Gift DIalog -->
     <div id="gift" class="w-screen h-screen fixed  items-center top-0 left-0 z-[200] justify-center bg-black bg-opacity-50 " style="display: none;">
-        <div class="bg-white px-6 py-12 rounded-md text-black relative">
+        <div class="bg-white px-6 py-12 rounded-md text-black relative w-[40rem] max-w-full">
             <button id="giftCloser" class="absolute top-4 right-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -74,8 +74,7 @@
                 </div>
                 <div class="input-group">
                     <label for="message"> Your message</label>
-                    <textarea id="message" placeholder="Enter your message" required name="message">
-                                        </textarea>
+                    <textarea id="message" placeholder="Enter your message" required name="message"></textarea>
                 </div>
                 <input type="submit" value="Submit" class="bg-primary font-semibold text-white mb-4 cursor-pointer">
             </form>
@@ -86,7 +85,7 @@
     </div>
     <!-- End Dialog -->
     <div class="bg-black" style="background-image: url({{ asset('img/bg.png') }})">
-        <div class="container">
+        <div class="container overflow-x-hidden">
             <div class="lg:flex items-center py-6 justify-between hidden" id="top">
                 <div class="flex gap-6 items-center">
                     <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
@@ -125,7 +124,7 @@
                     </div>
                 </div>
                 <transition-group name="list" tag="ul">
-                    <div class="flex flex-col p-4 gap-3 bg-black fixed top-0 left-0 w-screen h-screen z-20" v-if="showMenu">
+                    <div class="flex flex-col p-4 gap-3 bg-black fixed top-0 left-0 w-screen h-screen z-20" v-show="showMenu">
                         <div class="flex justify-between">
                             <div></div>
                             <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
@@ -218,7 +217,7 @@
             </div>
             <div class="flex justify-end">
                 <transition name="list2">
-                    <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-if="showFooter">
+                    <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
                         <div class="font-medium flex flex-col">
                             <span>MON</span>
                             <span class="text-sm"><span class="border-b border-primary">12:00</span> PM</span>
@@ -281,17 +280,7 @@
             transition: max-height 0.3s, opacity 0.6s, visibility 0.9s linear;
         }
     </style>
-    <script>
-        let closer = document.getElementById("giftCloser")
-        let toggler = document.getElementById("giftToggler")
-        let wrap = document.getElementById("gift")
-        toggler.onclick = function() {
-            wrap.style.display = "flex"
-        }
-        closer.onclick = function() {
-            wrap.style.display = "none"
-        }
-    </script>
+
     <script>
         const {
             createApp
@@ -348,6 +337,21 @@
             styleButton: false, // true if you are using the SevenRooms button
             clientToken: "" //(Optional) Pass the api generated clientTokenId here
         })
+    </script>
+    <script>
+        let closer = document.getElementById("giftCloser")
+        let toggler = document.getElementById("giftToggler")
+        let toggler2 = document.getElementById("giftToggler2")
+        let wrap = document.getElementById("gift")
+        toggler.onclick = function() {
+            wrap.style.display = "flex"
+        }
+        toggler2.onclick = function() {
+            wrap.style.display = "flex"
+        }
+        closer.onclick = function() {
+            wrap.style.display = "none"
+        }
     </script>
 </body>
 

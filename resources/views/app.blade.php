@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <transition-group name="list" tag="ul">
-                    <div class="flex flex-col p-4 gap-3 bg-black fixed top-0 left-0 w-screen h-screen z-20" v-if="showMenu">
+                    <div class="flex flex-col p-4 gap-3 bg-black fixed top-0 left-0 w-screen h-screen z-20" v-show="showMenu">
                         <div class="flex justify-between">
                             <div></div>
                             <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
@@ -264,7 +264,7 @@
             </div>
             <div class="flex justify-end">
                 <transition name="list2">
-                    <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-if="showFooter">
+                    <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
                         <div class="font-medium flex flex-col">
                             <span>MON</span>
                             <span class="text-sm"><span class="border-b border-primary">12:00</span> PM</span>
@@ -375,7 +375,9 @@
         toggler.onclick = function() {
             wrap.style.display = "flex"
         }
- 
+        toggler2.onclick = function() {
+            wrap.style.display = "flex"
+        }
         closer.onclick = function() {
             wrap.style.display = "none"
         }
