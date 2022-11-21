@@ -52,6 +52,7 @@
 </head>
 
 <body class=" text-white font-Morn">
+
     <!-- Gift DIalog -->
     <div id="gift" class="w-screen h-screen fixed  items-center top-0 left-0 z-[200] justify-center bg-black bg-opacity-50 " style="display: none;">
         <div class="bg-white px-6 py-12 rounded-md text-black relative w-[40rem] max-w-full">
@@ -90,7 +91,7 @@
             <div class="lg:flex items-center py-6 justify-between hidden" id="top">
                 <div class="flex gap-6 items-center">
                     <a href="/">
-                    <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+                        <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
 
                     </a>
                     <div class="flex items-center gap-6 z-10">
@@ -118,7 +119,7 @@
             <div class="lg:hidden items-center py-6 justify-between flex" id="mobiletop">
                 <div class="w-full flex gap-6 items-center justify-between">
                     <a href="/">
-                    <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+                        <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
 
                     </a>
                     <div class="flex items-center gap-6 z-10">
@@ -135,7 +136,7 @@
                         <div class="flex justify-between">
                             <div></div>
                             <a href="/">
-                            <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+                                <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
 
                             </a>
                             <button @click="showMenu = false">
@@ -274,7 +275,7 @@
                 </div>
                 <div class="flex justify-start lg:justify-end order-1 lg:order-3">
                     <a href="/">
-                    <img src="{{ asset('img/onze.svg') }}" class="w-16" alt="ONZE">
+                        <img src="{{ asset('img/onze.svg') }}" class="w-16" alt="ONZE">
 
                     </a>
                 </div>
@@ -331,7 +332,7 @@
                 </transition>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4">
             <span id="year" class="mr-1"> </span> &#169; ONZE RESTAURANT. ALL Rights Reserved
         </div>
     </div>
@@ -453,6 +454,13 @@
             styleButton: false, // true if you are using the SevenRooms button
             clientToken: "" //(Optional) Pass the api generated clientTokenId here
         })
+    </script>
+
+    <script>
+        // setTimeout(() => {
+        //     var audio = new Audio('audio.mpeg');
+        //     audio.play();
+        // }, 6000);
     </script>
 </body>
 

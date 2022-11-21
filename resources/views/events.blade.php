@@ -284,7 +284,7 @@
                 </transition>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4">
             <span id="year" class="mr-1"> </span> &#169; ONZE RESTAURANT. ALL Rights Reserved
         </div>
     </div>
