@@ -207,8 +207,8 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="bg-black mt-12 py-12" style="background-image: url({{ asset('img/secbg.png') }})" id="footer">
+       <!-- Footer -->
+       <div class="bg-black mt-12 py-12" style="background-image: url({{ asset('img/secbg.png') }})" id="footer">
         <div class="container">
             <div class="grid grid-cols-1 gap-6 lg:gap-0 lg:grid-cols-3 items-start">
                 <div class="flex flex-col gap-3 order-3 lg:order-1">
@@ -227,61 +227,64 @@
                 </div>
                 <div class="flex justify-start lg:justify-end order-1 lg:order-3">
                     <a href="/">
-                    <img src="{{ asset('img/onze.svg') }}" class="w-16" alt="ONZE">
+                        <img src="{{ asset('img/onze.svg') }}" class="w-16" alt="ONZE">
 
                     </a>
                 </div>
             </div>
             <div class="pt-12 pb-6 flex items-center justify-between w-full">
                 <p href="#" class="text-primary cursor-pointer" id="res2">/ BOOK NOW</p>
-                <span :class="showFooter && 'text-primary font-semibold transform lg:translate-x-[-28rem] duration-700'" @click="showFooter = !showFooter" class="cursor-pointer transition block">Opening Hours</span>
+                <div>
+                    <span :class="showFooter && 'text-primary font-semibold transform self-start  duration-700'" @click="showFooter = !showFooter" class="cursor-pointer transition self-end mb-4">Opening Hours</span>
+                    <transition name="list2">
+                        <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
+                            <div class="font-medium flex flex-col">
+                                <span>MON</span>
+                                <span class="time">{{$hours->mon_open}}</span>
+                                <span class="time">{{$hours->mon_close}}</span>
+
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>TUE</span>
+                                <span class="time">{{$hours->tue_open}}</span>
+                                <span class="time">{{$hours->tue_close}}</span>
+
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>WED</span>
+                                <span class="time">{{$hours->wed_open}}</span>
+                                <span class="time">{{$hours->wed_close}}</span>
+
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>THU</span>
+                                <span class="time">{{$hours->thu_open}}</span>
+                                <span class="time">{{$hours->thu_close}}</span>
+
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>FRI</span>
+                                <span class="time">{{$hours->fri_open}}</span>
+                                <span class="time">{{$hours->fri_close}}</span>
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>SAT</span>
+                                <span class="time">{{$hours->sat_open}}</span>
+                                <span class="time">{{$hours->sat_close}}</span>
+
+                            </div>
+                            <div class="font-medium flex flex-col">
+                                <span>SUN</span>
+                                <span class="time">{{$hours->sun_open}}</span>
+                                <span class="time">{{$hours->sun_close}}</span>
+
+                            </div>
+                        </div>
+                    </transition>
+                </div>
             </div>
             <div class="flex justify-end">
-                <transition name="list2">
-                    <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
-                        <div class="font-medium flex flex-col">
-                            <span>MON</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_close}}"></span>
 
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>TUE</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_close}}"></span>
-
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>WED</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_close}}"></span>
-
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>THU</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_close}}"></span>
-
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>FRI</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->fri_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->fri_close}}"></span>
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>SAT</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_close}}"></span>
-
-                        </div>
-                        <div class="font-medium flex flex-col">
-                            <span>SUN</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_close}}"></span>
-
-                        </div>
-                    </div>
-                </transition>
             </div>
         </div>
         <div class="flex justify-center mt-4">
