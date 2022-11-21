@@ -163,7 +163,7 @@
                 </transition-group>
             </div>
             <!-- Loop -->
-            <div class="pt-24 pb-16 max-w-7xl mx-auto">
+            <div class="pt-24 pb-16 max-w-5xl mx-auto">
                 <h2 class="text-6xl">ONZE DJs</h2>
                 <div class=" mx-auto mt-24">
                     <div class="flex flex-col gap-12">
