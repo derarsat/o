@@ -9,6 +9,15 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="./vue.js"></script>
+    <!-- Fav -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /Fav -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         .list-enter-active,
@@ -147,7 +156,7 @@
             <!-- Loop -->
             <div class="pt-24 pb-16">
                 <h2 class="text-6xl">ONZE DJs</h2>
-                <div class="max-w-5xl mx-auto mt-24">
+                <div class="container mx-auto mt-24">
                     <div class="flex flex-col gap-12">
                         @foreach($events as $event)
                         <div class="bg-white p-4 grid grid-cols-1 lg:grid-cols-2 gap-12 font-semibold event">
@@ -189,8 +198,8 @@
         </div>
     </div>
 
-     <!-- Footer -->
-     <div class="bg-black mt-12 py-12" style="background-image: url({{ asset('img/secbg.png') }})" id="footer">
+    <!-- Footer -->
+    <div class="bg-black mt-12 py-12" style="background-image: url({{ asset('img/secbg.png') }})" id="footer">
         <div class="container">
             <div class="grid grid-cols-1 gap-6 lg:gap-0 lg:grid-cols-3 items-start">
                 <div class="flex flex-col gap-3 order-3 lg:order-1">
@@ -222,25 +231,25 @@
                             <span>MON</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>TUE</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>WED</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>THU</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>FRI</span>
@@ -251,13 +260,13 @@
                             <span>SAT</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>SUN</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_close}}"></span>
-                        
+
                         </div>
                     </div>
                 </transition>
@@ -348,8 +357,8 @@
         })
     </script>
     <script>
-          let year = new Date().getFullYear()
-        document.getElementById("year").innerText= year
+        let year = new Date().getFullYear()
+        document.getElementById("year").innerText = year
         let closer = document.getElementById("giftCloser")
         let toggler = document.getElementById("giftToggler")
         let toggler2 = document.getElementById("giftToggler2")

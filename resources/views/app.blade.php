@@ -10,6 +10,15 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="./vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Fav -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /Fav -->
     <style>
         .list-enter-active,
         .list-leave-active {
@@ -269,25 +278,25 @@
                             <span>MON</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>TUE</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>WED</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>THU</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>FRI</span>
@@ -298,13 +307,13 @@
                             <span>SAT</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_close}}"></span>
-                        
+
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>SUN</span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_open}}"></span>
                             <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_close}}"></span>
-                        
+
                         </div>
                     </div>
                 </transition>
@@ -378,7 +387,7 @@
     </script>
     <script>
         let year = new Date().getFullYear()
-        document.getElementById("year").innerText= year
+        document.getElementById("year").innerText = year
         let closer = document.getElementById("giftCloser")
         let toggler = document.getElementById("giftToggler")
         let toggler2 = document.getElementById("giftToggler2")
