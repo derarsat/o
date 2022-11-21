@@ -103,7 +103,7 @@ class EventController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'title' => 'required|max:255|unique:events,name' . $id . ',id',
+            'title' => 'required|max:255|unique:events,name,' . $id . ',id',
             'desc' => 'required',
             'hint' => 'required',
             'duration' => 'required|integer',
