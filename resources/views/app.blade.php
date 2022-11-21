@@ -468,10 +468,10 @@
             element.innerText = newText
 
         }
-        // setTimeout(() => {
-        //     var audio = new Audio('audio.mpeg');
-        //     audio.play();
-        // }, 6000);
+        setTimeout(() => {
+            var audio = new Audio('audio.mpeg');
+            audio.play();
+        }, 6000);
     </script>
 </body>
 
