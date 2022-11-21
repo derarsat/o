@@ -289,43 +289,43 @@
                     <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
                         <div class="font-medium flex flex-col">
                             <span>MON</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->mon_close}}"></span>
+                            <span class="time">{{$hours->mon_open}}</span>
+                            <span class="time">{{$hours->mon_close}}</span>
 
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>TUE</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->tue_close}}"></span>
+                            <span class="time">{{$hours->tue_open}}</span>
+                            <span class="time">{{$hours->tue_close}}</span>
 
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>WED</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->wed_close}}"></span>
+                            <span class="time">{{$hours->wed_open}}</span>
+                            <span class="time">{{$hours->wed_close}}</span>
 
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>THU</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->thu_close}}"></span>
+                            <span class="time">{{$hours->thu_open}}</span>
+                            <span class="time">{{$hours->thu_close}}</span>
 
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>FRI</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->fri_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->fri_close}}"></span>
+                            <span class="time">{{$hours->fri_open}}</span>
+                            <span class="time">{{$hours->fri_close}}</span>
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>SAT</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sat_close}}"></span>
+                            <span class="time">{{$hours->sat_open}}</span>
+                            <span class="time">{{$hours->sat_close}}</span>
 
                         </div>
                         <div class="font-medium flex flex-col">
                             <span>SUN</span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_open}}"></span>
-                            <span class="text-sm"><input class="font-medium h-[13px] bg-transparent border-none p-0" type="time" disabled value="{{$hours->sun_close}}"></span>
+                            <span class="time">{{$hours->sun_open}}</span>
+                            <span class="time">{{$hours->sun_close}}</span>
 
                         </div>
                     </div>
@@ -457,10 +457,18 @@
     </script>
 
     <script>
-        // setTimeout(() => {
-        //     var audio = new Audio('audio.mpeg');
-        //     audio.play();
-        // }, 6000);
+        var times = document.querySelectorAll(".time")
+        for (let index = 0; index < times.length; index++) {
+            const element = times[index];
+            const myTime = element.innerText
+            const newText = parseInt(myTime.split(":")[0]) % 12 + ":" + myTime.split(":")[1] + " " + (parseInt(parseInt(myTime.split(":")[0]) / 12) != 1 ? "am" : "pm")
+            element.innerText = newText
+
+        }
+        setTimeout(() => {
+            var audio = new Audio('audio.mpeg');
+            audio.play();
+        }, 6000);
     </script>
 </body>
 
