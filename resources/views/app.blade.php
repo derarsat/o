@@ -162,7 +162,7 @@
                 <h2 class="text-5xl lg:text-6xl  mt-6 lg:mt-0">UNEXPLORED <br> DESIRES</h2>
                 <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer">/ BOOK NOW</p>
                 <span class="w-32 lg:block mt-24 hidden -ml-[3.5rem]" id="hint"></span>
-                <div id="mainLotti" class="absolute -top-20  -right-12  -mt-16" style="min-height:50vh ;">
+                <div id="mainLotti" class="absolute" style="width:1500px;right:-400px;top:-140px">
                 </div>
 
                 <div>
@@ -434,14 +434,14 @@
     <script>
         lottie.loadAnimation({
             container: document.getElementById("hint"), // the dom element that will contain the animation
-            renderer: 'svg',
+            renderer: 'canvas',
             loop: true,
             autoplay: true,
             path: 'hint.json' // the path to the animation json
         });
         lottie.loadAnimation({
             container: document.getElementById("mainLotti"), // the dom element that will contain the animation
-            renderer: 'svg',
+            renderer: 'canvas',
             loop: true,
             autoplay: true,
             path: 'main.json' // the path to the animation json

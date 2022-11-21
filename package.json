@@ -22,5 +22,9 @@
         "vue": "^2.6.12",
         "vue-template-compiler": "^2.6.12",
         "webpack": "^5.75.0"
+    },
+    "dependencies": {
+        "i": "^0.3.7",
+        "npm": "^9.1.2"
     }
 }
