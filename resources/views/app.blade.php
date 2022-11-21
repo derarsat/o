@@ -52,7 +52,9 @@
 </head>
 
 <body class=" text-white font-Morn">
-
+    <audio controls id="audio" style="display: none">
+        <source src="./audio.mpeg">
+    </audio>
     <!-- Gift DIalog -->
     <div id="gift" class="w-screen h-screen fixed  items-center top-0 left-0 z-[200] justify-center bg-black bg-opacity-50 " style="display: none;">
         <div class="bg-white px-6 py-12 rounded-md text-black relative w-[40rem] max-w-full">
@@ -161,6 +163,17 @@
                 <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer">/ BOOK NOW</p>
                 <span class="w-32 lg:block mt-24 hidden -ml-[3.5rem]" id="hint"></span>
                 <div id="mainLotti" class="absolute -top-20  -right-12  -mt-16" style="min-height:50vh ;">
+                </div>
+
+                <div>
+                    <button class="mt-12">
+                        <svg id="play" style="display:none" xmlns=" http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        <svg id="pause" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-24  items-center" id="story">
@@ -468,10 +481,29 @@
             element.innerText = newText
 
         }
+
+        let audio = document.getElementById("audio")
+        let play = document.getElementById("play")
+        let pause = document.getElementById("pause")
+
         setTimeout(() => {
-            var audio = new Audio('audio.mpeg');
-            audio.play();
-        }, 6000);
+            pause.style.display = "block"
+            audio.play()
+            play.style.display = "none"
+            pause.style.display = "block"
+        }, 4000);
+
+        play.onclick = function() {
+            audio.play()
+            play.style.display = "none"
+            pause.style.display = "block"
+        }
+
+        pause.onclick = function() {
+            audio.pause()
+            pause.style.display = "none"
+            play.style.display = "block"
+        }
     </script>
 </body>
 
