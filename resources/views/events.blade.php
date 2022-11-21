@@ -97,7 +97,10 @@
         <div class="container overflow-x-hidden">
             <div class="lg:flex items-center py-6 justify-between hidden" id="top">
                 <div class="flex gap-6 items-center">
+                    <a href="/">
                     <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+
+                    </a>
                     <div class="flex items-center gap-6 z-10">
                         <button @click="showMenu = !showMenu">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -122,7 +125,10 @@
             <!-- Mobile MEnu -->
             <div class="lg:hidden items-center py-6 justify-between flex" id="mobiletop">
                 <div class="w-full flex gap-6 items-center justify-between">
+                    <a href="/">
                     <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+
+                    </a>
                     <div class="flex items-center gap-6 z-10">
                         <button @click="showMenu = !showMenu">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -136,7 +142,10 @@
                     <div class="flex flex-col p-4 gap-3 bg-black fixed top-0 left-0 w-screen h-screen z-20" v-show="showMenu">
                         <div class="flex justify-between">
                             <div></div>
+                            <a href="/">
                             <img src="{{ asset('img/onze.svg') }}" class="h-24" alt="ONZE">
+
+                            </a>
                             <button @click="showMenu = false">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -217,7 +226,10 @@
                     </div>
                 </div>
                 <div class="flex justify-start lg:justify-end order-1 lg:order-3">
+                    <a href="/">
                     <img src="{{ asset('img/onze.svg') }}" class="w-16" alt="ONZE">
+
+                    </a>
                 </div>
             </div>
             <div class="pt-12 pb-6 flex items-center justify-between w-full">
