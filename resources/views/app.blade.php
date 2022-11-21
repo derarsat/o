@@ -160,7 +160,7 @@
                 <h2 class="text-5xl lg:text-6xl  mt-6 lg:mt-0">UNEXPLORED <br> DESIRES</h2>
                 <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer">/ BOOK NOW</p>
                 <span class="w-32 lg:block mt-24 hidden -ml-[3.5rem]" id="hint"></span>
-                <div id="mainLotti" class="absolute -top-20  -right-12  -mt-16">
+                <div id="mainLotti" class="absolute -top-20  -right-12  -mt-16" style="min-height:50vh ;">
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-24  items-center" id="story">
