@@ -49,8 +49,8 @@ class EventController extends Controller
             'title' => 'required|unique:events|max:255',
             'desc' => 'required',
             'hint' => 'required',
-            'duration' => 'required|integer',
-            'price' => 'required|integer',
+            'duration' => 'required',
+            'price' => 'required',
             'date' => 'required|date',
             'image' => 'required|mimes:jpeg,png,jpg,svg',
         ]);
@@ -68,7 +68,6 @@ class EventController extends Controller
         $event->image = $imageUrl;
         $event->save();
         return redirect(route("events.index"));
-
     }
 
     /**
@@ -138,6 +137,8 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $event = Event::find($id);
+        $event->delete();
+        return redirect(route("events.index"));
     }
 }

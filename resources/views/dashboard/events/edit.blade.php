@@ -25,7 +25,7 @@
             {{--Price--}}
             <div class="input-group">
                 <label for="price"> Price (AED)</label>
-                <input value="{{$event->price}}" type="number" id="price" placeholder="Enter event price" required
+                <input step="0.01" value="{{$event->price}}" type="number" id="price" placeholder="Enter event price" required
                        name="price">
                 @error('price')
                 <span class="error-label" role="alert">
@@ -79,7 +79,7 @@
             {{--Duration--}}
             <div class="input-group">
                 <label for="duration">Duration (Minutes)</label>
-                <input value="{{$event->duration}}" type="number" id="duration" placeholder="Enter event duration"
+                <input value="{{$event->duration}}" step="0.01" type="number" id="duration" placeholder="Enter event duration"
                        required name="duration">
                 @error('duration')
                 <span class="error-label" role="alert">

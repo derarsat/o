@@ -92,7 +92,7 @@
                                 <a href="/#home">Home</a>
                                 <a href="/#story">The Story Begins</a>
                                 <a href="#menus">Menus</a>
-                                <a href="/events">ONZE Djs</a>
+                                <a href="/events">ONZE DJs</a>
                                 <span id="giftToggler" class="cursor-pointer">Gift Vouchers</span>
                             </div>
                         </transition-group>
@@ -129,7 +129,7 @@
                         <a href="/#home">Home</a>
                         <a href="/#story">The Story Begins</a>
                         <a href="#menus">Menus</a>
-                        <a href="/events">ONZE Djs</a>
+                        <a href="/events">ONZE DJs</a>
                         <span id="giftToggler2" class="cursor-pointer">Gift Vouchers</span>
                         <a href="#" class="font-semibold text-primary">/ MAKE A RESERVATION</a>
 
@@ -244,7 +244,7 @@
                     <a href="/#home">Home</a>
                     <a href="/#story">The Story Begins</a>
                     <a href="/#menu">Menus</a>
-                    <a href="/events">ONZE Djs</a>
+                    <a href="/events">ONZE DJs</a>
                     <a href="/">Gift Vouchers</a>
                 </div>
                 <div class="flex justify-start lg:justify-center order-2">
@@ -310,6 +310,9 @@
                 </transition>
             </div>
         </div>
+        <div class="flex justify-center">
+            <span id="year" class="mr-1"> </span> &#169; ONZE RESTAURANT. ALL Rights Reserved
+        </div>
     </div>
 
 
@@ -374,6 +377,8 @@
         }).mount('#gift')
     </script>
     <script>
+        let year = new Date().getFullYear()
+        document.getElementById("year").innerText= year
         let closer = document.getElementById("giftCloser")
         let toggler = document.getElementById("giftToggler")
         let toggler2 = document.getElementById("giftToggler2")

@@ -22,7 +22,7 @@ Create Event
         {{--Price--}}
         <div class="input-group">
             <label for="price"> Price (AED)</label>
-            <input type="number" id="price" placeholder="Enter event price" required name="price">
+            <input type="number" step="0.01" id="price" placeholder="Enter event price" required name="price">
             @error('price')
             <span class="error-label" role="alert">
                 <strong>{{ $message }}</strong>
@@ -64,7 +64,7 @@ Create Event
         {{--Duration--}}
         <div class="input-group">
             <label for="duration">Duration (Minutes)</label>
-            <input type="number" id="duration" placeholder="Enter event duration" required name="duration">
+            <input type="number" step="0.01" id="duration" placeholder="Enter event duration" required name="duration">
             @error('duration')
             <span class="error-label" role="alert">
                 <strong>{{ $message }}</strong>
