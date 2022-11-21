@@ -154,9 +154,9 @@
                 </transition-group>
             </div>
             <!-- Loop -->
-            <div class="pt-24 pb-16">
+            <div class="pt-24 pb-16 max-w-7xl mx-auto">
                 <h2 class="text-6xl">ONZE DJs</h2>
-                <div class="container mx-auto mt-24">
+                <div class=" mx-auto mt-24">
                     <div class="flex flex-col gap-12">
                         @foreach($events as $event)
                         <div class="bg-white p-4 grid grid-cols-1 lg:grid-cols-2 gap-12 font-semibold event">
