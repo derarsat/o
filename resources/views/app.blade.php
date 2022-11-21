@@ -280,10 +280,10 @@
                     </a>
                 </div>
             </div>
-            <div class="pt-12 pb-6 flex items-center justify-between w-full">
+            <div class="pt-12 pb-6 flex items-center justify-between w-full flex-wrap">
                 <p href="#" class="text-primary cursor-pointer" id="res2">/ BOOK NOW</p>
                 <div>
-                    <span :class="showFooter && 'text-primary font-semibold transform self-start  duration-700'" @click="showFooter = !showFooter" class="cursor-pointer transition self-end mb-4 block">Opening Hours</span>
+                    <span :class="showFooter && 'text-primary font-semibold transform self-start  duration-700'" @click="showFooter = !showFooter" class="cursor-pointer transition self-end my-4 block">Opening Hours</span>
                     <transition name="list2">
                         <div class="flex gap-4 flex-wrap [&>*]:flex-shrink-0 " v-show="showFooter">
                             <div class="font-medium flex flex-col">
