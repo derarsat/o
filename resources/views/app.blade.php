@@ -434,7 +434,7 @@
     <script>
         lottie.loadAnimation({
             container: document.getElementById("hint"), // the dom element that will contain the animation
-            renderer: 'canvas',
+            renderer: 'svg',
             loop: true,
             autoplay: true,
             path: 'hint.json' // the path to the animation json
