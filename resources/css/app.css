@@ -11,7 +11,8 @@
     @apply outline-none
 }
 .container{
-    @apply px-6
+    @apply px-6 w-full;
+    max-width:1660px;
 }
 
 .input-group {

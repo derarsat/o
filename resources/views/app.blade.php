@@ -160,9 +160,10 @@
 
             <div class="pt-56 pb-12 lg:pb-56 flex flex-col justify-center relative" id="home">
                 <h2 class="text-5xl lg:text-6xl  mt-6 lg:mt-0">UNEXPLORED <br> DESIRES</h2>
-                <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer">/ BOOK NOW</p>
+                <p id="res3" href="#" class="text-primary font-semibold text-lg mt-4 block cursor-pointer z-10">/ BOOK NOW</p>
                 <span class="w-32 lg:block mt-24 hidden -ml-[3.5rem]" id="hint"></span>
-                <div id="mainLotti" class="absolute" style="width:1500px;right:-400px;top:-140px">
+
+                <div id="mainLotti">
                 </div>
 
                 <div>
@@ -355,6 +356,29 @@
 
 
     <style>
+        #mainLotti {
+            position: absolute;
+            width: 1500px;
+            right: -400px;
+            top: -140px
+        }
+
+        @media (max-width:690px) {
+            #mainLotti {
+                position: absolute;
+                width: 1000px;
+                right: -300px;
+                top: -140px
+            }
+        }
+        @media (max-width:450px) {
+            #mainLotti {
+                position: absolute;
+                width: 900px;
+                right: -300px;
+                top: -150px
+            }
+        }
         #ttrigger {
             transition: all 500ms linear;
         }
