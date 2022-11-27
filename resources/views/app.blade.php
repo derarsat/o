@@ -227,10 +227,7 @@
                     MEET <br> THE CHEF
                 </h1>
                 <p>
-                    The masterful men behind the most delicious and impeccable dishes served at ONZE. His passion comes from
-                    the Japanese culture and the love for quality and tradition. <br> <br>His exceptional skills guarantee
-                    that you
-                    will be delighted with your food experience from its presentation down to its taste.
+                    I’m so excited to design a menu that mixes flavours from Peru and Japan. The dishes I have created are inspired by my travels and contain amazing ingredients such as salt from the mountains of Peru. When guests come and eat with us at Onze, I hope they will be transported to other times of their life through my dishes
                 </p>
             </div>
             <div class="col-span-2">
@@ -371,6 +368,7 @@
                 top: -140px
             }
         }
+
         @media (max-width:450px) {
             #mainLotti {
                 position: absolute;
@@ -379,6 +377,7 @@
                 top: -150px
             }
         }
+
         #ttrigger {
             transition: all 500ms linear;
         }
