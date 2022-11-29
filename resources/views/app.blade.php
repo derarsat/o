@@ -242,12 +242,12 @@
             </h1>
             <div class="container pb-24">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-9">
-                    <img src="{{ asset('img/plates/1.png') }}" alt="ONZE">
-                    <img src="{{ asset('img/plates/2.png') }}" alt="ONZE">
-                    <img src="{{ asset('img/plates/1.png') }}" alt="ONZE">
-                    <img src="{{ asset('img/plates/2.png') }}" alt="ONZE">
-                    <img src="{{ asset('img/plates/1.png') }}" alt="ONZE">
-                    <img src="{{ asset('img/plates/2.png') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/1.jpg') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/2.jpg') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/3.jpg') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/4.jpg') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/5.jpg') }}" alt="ONZE">
+                    <img src="{{ asset('img/plates/6.jpg') }}" alt="ONZE">
                 </div>
             </div>
             <div class="container pb-24" id="menus">
